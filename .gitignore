@@ -1,0 +1,9 @@
+venv
+.venv
+Client/__pycache__
+Client/venv
+Client/pfand_crypto.py
+Server/__pycache__
+Server/venv
+Server/security.py
+.vscode

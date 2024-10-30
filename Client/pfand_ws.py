@@ -33,7 +33,7 @@ class WsClient:
             self.state = WsState.AUTHING
             msg = json.loads(await ws.recv())
             if msg['status'] != "ok":
-                self.logger("first pre-auth message status err, reconect in 5 secs")
+                self.logger("first pre-auth message status err, reconnect in 5 secs")
                 self.state = WsState.FAILED
                 await asyncio.sleep(5)
                 self.logger("reconnect")

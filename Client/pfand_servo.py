@@ -16,6 +16,8 @@ class Servo:
 
         self.openingTime = 2.5
 
+        self.last_com_time = time.time()
+
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.pin, GPIO.OUT)
         self.PWM = GPIO.PWM(self.pin, 50)
@@ -47,6 +49,7 @@ class Servo:
     def open(self):
         GPIO.output(self.pin, 1)
         self.PWM.ChangeDutyCycle(self.max_degree / 18 + 2)
+        thrd.Thread(target=self.promisePowerOff).start()
 
     def timer(self):
         time.sleep(5)
@@ -61,6 +64,15 @@ class Servo:
     def close(self):
         GPIO.output(self.pin, 1)
         self.PWM.ChangeDutyCycle(self.min_degree / 18 + 2)
+        thrd.Thread(target=self.promisePowerOff).start()
 
     def powerOff(self):
         self.PWM.ChangeDutyCycle(0)
+
+    def promisePowerOff(self, time_to_sleep: float = 3.5):
+        time.sleep(time_to_sleep)
+        self.powerOff()
+
+    def promiseClose(self, time_to_sleep: float = 5):
+        time.sleep(time_to_sleep)
+        self.close()

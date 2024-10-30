@@ -23,9 +23,9 @@ class Servo:
 
         self.logger("servo inited")
 
-    def __call__(self):
+    def __call__(self): #deprecated
         if self.enabled:
-            self.isOn = True
+            #self.isOn = True
             angle = self.min_degree + (((time.time() - self.startDelta) / self.openingTime) * (self.max_degree - self.min_degree))
             if angle >= self.max_degree:
                 self.enabled = False
@@ -40,16 +40,27 @@ class Servo:
             self.isOn = False
             self.logger("servo stopped")
 
+    #def open(self):
+    #    self.enabled = True
+    #    self.logger("servo is opening now")
+
     def open(self):
-        self.enabled = True
-        self.logger("servo is opening now")
+        GPIO.output(self.pin, 1)
+        self.PWM.ChangeDutyCycle(self.max_degree / 18 + 2)
 
     def timer(self):
         time.sleep(5)
         self.close()
 
+    #def close(self):
+    #    self.isOn = True
+    #    GPIO.output(self.pin, 1)
+    #    self.PWM.ChangeDutyCycle(self.min_degree / 18 + 2)
+    #    self.logger("servo closing")
+
     def close(self):
-        self.isOn = True
         GPIO.output(self.pin, 1)
         self.PWM.ChangeDutyCycle(self.min_degree / 18 + 2)
-        self.logger("servo closing")
+
+    def powerOff(self):
+        self.PWM.ChangeDutyCycle(0)

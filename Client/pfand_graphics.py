@@ -233,7 +233,7 @@ class CardedScreen(Screen):
 
         #Button(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), self.app.width // 10, self.app.height // 10, lambda: self.toScreen(IdleScreen), (180, 180, 180), Anchor.CENTER)
         #Text(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), "Назад", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
-        Text(self.root, es, self.app.width // 10 * 9, self.app.height // 10, "Ekran zakroetsya avtomaticheski", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
+        Text(self.root, es, self.app.width // 10, self.app.height // 10 * 9, "Экран закроется автоматически...", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
         if time.time() - self.t_start > 10:
             self.app.bankWorkState = BankWorkState.NOTHING
             self.toScreen(IdleScreen)

@@ -19,11 +19,11 @@ class HX711:
     
 class RFID:
     def __init__(self, cfg: dict, logger):
-        self.uuid = ConfigVar("uuid", "AAAAAAAA")
+        self.uuid = ConfigVar("uuid", "[255, 255, 255, 255, 255]")
         self.isReaded = ConfigVar("read", False)
 
     def presentedCard(self):
-        val = [self.isReaded.read, self.uuid.uuid]
+        val = [self.isReaded.read, eval(self.uuid.uuid)]
         self.isReaded.read = False
         return val
     

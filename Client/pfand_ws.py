@@ -28,7 +28,7 @@ class WsClient:
 
     async def wbs_runner(self):
         self.logger("trying to connect...")
-        async for ws in wbs.connect('ws://192.168.0.100:9090'):
+        async for ws in wbs.connect('ws://192.168.0.137:9090'):
             self.logger("connected to ws server")
             self.state = WsState.AUTHING
             msg = json.loads(await ws.recv())
@@ -133,18 +133,35 @@ class WsClient:
         #self.to_send.append({"op": "neural.prediction.v2", "data": {"frame": hehehehehhehehex_very_long}})
         thrd.Thread(target=self.reping, args=(5,))
 
+    def get_set_user(self, card_uuid_list: list, screen_inst):
+        card_uuid = ''.join(list(map(lambda el: hex(el)[2:], card_uuid_list))).lower()
+        self.to_send.append({"op": "machine.user.get", "data": {"filter": {"uuid": card_uuid}}})
+        q = None
+        while q is None:
+            q = self.find("machine.user.get")
+        acc = eval(sec.decrypt(self.cfg, bytes(q['data'], 'utf-8')))
+        if not 'uuid' in acc.keys():
+            acc = {"uuid": card_uuid, "bal": 0}
+        acc['bal'] += 1
+        print(acc)
+        self.to_send.append({"op": "machine.user.set", "data": {"filter": {"uuid": card_uuid}, "new_data": sec.encrypt(self.cfg, json.dumps(acc)).decode("utf-8")}})
+        screen_inst.msg = f"Ваш баланс: {acc['bal']}"
+
     def read(self):
         if len(self.msg) == 1: self.state = WsState.READY
         return self.msg.pop(0)
     
     def find(self, op):
-        for i in range(len(self.msg)):
-            if 'op' in self.msg[i].keys():
-                if op == self.msg[i]['op']:
+        i = 0
+        #for i in range(len(self.msg)):
+        while i < len(self.msg):
+            if 'op' in self.msg[i].keys() if i < len(self.msg) else []:
+                if op == self.msg[i]['op'] if i < len(self.msg) else '':
                     if len(self.msg) == 1: self.state = WsState.READY
                     return self.msg.pop(i)
+            i += 1
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     from pfand_types import Logger
     logger = Logger()
     #run_wbs(json.load(open("Client/pfand_configs.json")), logger)

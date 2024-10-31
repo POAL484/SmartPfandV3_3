@@ -9,7 +9,7 @@ from pfand_ws import WsClient, WsState
 from pfand_neural import *
 
 import pfand_devices as dvs
-dvs.import_as(emulator=False)
+dvs.import_as(emulator=True)
 
 pg.init()
 
@@ -196,8 +196,8 @@ class CardScreen(Screen):
         pg.draw.arc(self.root, (50, 50, 200), pg.Rect(stDrawPointX-260, stDrawPointY-260, 260*2, 260*2), 0, math.pi/2, 50)
         pg.draw.arc(self.root, (50, 50, 200), pg.Rect(stDrawPointX-360, stDrawPointY-360, 360*2, 360*2), 0, math.pi/2, 50)
 
-        Text(self.root, es, (self.app.width // 2), (self.app.height//3), "Приложи любую электронную", 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
-        Text(self.root, es, (self.app.width // 2), (self.app.height//3) + 100, "карту к считывателю", 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
+        Text(self.root, es, (self.app.width // 2.25), (self.app.height//3), "Приложи любую электронную", 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
+        Text(self.root, es, (self.app.width // 2.25), (self.app.height//3) + 100, "карту к считывателю", 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
 
         if self.app.rfid.presentedCard()[0]: self.toScreen(CardedScreen)
 
@@ -205,6 +205,8 @@ class CardedScreen(Screen):
     def __init__(self, *args):
         super().__init__(*args)
         self.app.air()
+        thrd.Thread(target=self.app.wsclient.get_set_user, args=(self.app.rfid.presentedCard()[1], self)).start()
+        self.msg = "Получение информации..."
 
     def __call__(self):
         self.root.fill((255, 255, 255))
@@ -223,7 +225,10 @@ class CardedScreen(Screen):
                                                      [stDrawPointX+280, stDrawPointY+40],
                                                      [stDrawPointX-50, stDrawPointY]])
         
-        Text(self.root, es, (self.app.width // 2), (self.app.height // 3), str(self.app.rfid.presentedCard()[1]), 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
+        Text(self.root, es, (self.app.width // 2.25), (self.app.height // 3), str(self.msg), 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
+
+        Button(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), self.app.width // 10, self.app.height // 10, lambda: self.toScreen(IdleScreen), (180, 180, 180), Anchor.CENTER)
+        Text(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), "Назад", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
 
 class App:
     def __init__(self):

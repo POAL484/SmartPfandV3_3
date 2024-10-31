@@ -17,6 +17,7 @@ async def machine_user_set(machine_id, data, users, tokens, info, server):
         user = new_data
         user['user_id'] = info['last_user_id'] + 1
         info['last_user_id'] += 1
+        users.insert_one(user)
     return "ok", "ok"
 
 async def neural_prediction_start(machine_id, data, users, tokens, info, server):

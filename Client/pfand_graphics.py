@@ -24,15 +24,16 @@ class Screen:
 
     def call(self):
         #print(self.app.wsclient.msg)
-        if not self.app.neural.ws_send_send is None:
-            thrd.Thread(target=self.app.wsclient.neural_call, args=(self.app.neural.ws_send_send,)).start()
-            self.app.neural.ws_send_send = None
-        pred = self.app.wsclient.find("neural.prediction.v2.finish")
-        self.app.wsclient.find("neural.prediction.v2.pcg") 
-        self.app.wsclient.find("neural.prediction.v2.start")
-        self.app.wsclient.find("ping")
-        if not pred is None:
-            self.app.neural.ws_send_recv = pred['data']
+        if self.app.bankWorkState == BankWorkState.NEURAL_CHECK:
+            if not self.app.neural.ws_send_send is None:
+                thrd.Thread(target=self.app.wsclient.neural_call, args=(self.app.neural.ws_send_send,)).start()
+                self.app.neural.ws_send_send = None
+            pred = self.app.wsclient.find("neural.prediction.v2.finish")
+            self.app.wsclient.find("neural.prediction.v2.pcg") 
+            self.app.wsclient.find("neural.prediction.v2.start")
+            self.app.wsclient.find("ping")
+            if not pred is None:
+                self.app.neural.ws_send_recv = pred['data']
 
 class InitScreen(Screen):   
     def __call__(self):
@@ -184,6 +185,7 @@ class CardScreen(Screen):
         super().__init__(*args)
         self.app.servo.open()
         self.app.neural.ws_send_recv = None
+        self.app.bankWorkState = BankWorkState.CARD
 
     def __call__(self):
         self.root.fill((255, 255, 255))
@@ -232,7 +234,9 @@ class CardedScreen(Screen):
         #Button(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), self.app.width // 10, self.app.height // 10, lambda: self.toScreen(IdleScreen), (180, 180, 180), Anchor.CENTER)
         #Text(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), "Назад", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
         Text(self.root, es, self.app.width // 10 * 9, self.app.height // 10, "Ekran zakroetsya avtomaticheski", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
-        if time.time() - self.t_start > 10: self.toScreen(IdleScreen)
+        if time.time() - self.t_start > 10:
+            self.app.bankWorkState = BankWorkState.NOTHING
+            self.toScreen(IdleScreen)
 
 class App:
     def __init__(self):

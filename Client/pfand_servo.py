@@ -50,6 +50,7 @@ class Servo:
         GPIO.output(self.pin, 1)
         self.PWM.ChangeDutyCycle(self.max_degree / 18 + 2)
         thrd.Thread(target=self.promisePowerOff).start()
+        thrd.Thread(target=self.promiseClose).start()
 
     def timer(self):
         time.sleep(5)

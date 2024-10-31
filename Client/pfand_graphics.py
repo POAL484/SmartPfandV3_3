@@ -183,6 +183,7 @@ class CardScreen(Screen):
     def __init__(self, *args):
         super().__init__(*args)
         self.app.servo.open()
+        self.app.neural.ws_send_recv = None
 
     def __call__(self):
         self.root.fill((255, 255, 255))
@@ -207,6 +208,7 @@ class CardedScreen(Screen):
         self.app.air()
         thrd.Thread(target=self.app.wsclient.get_set_user, args=(self.app.rfid.presentedCard()[1], self)).start()
         self.msg = "Получение информации..."
+        self.t_start = time.time()
 
     def __call__(self):
         self.root.fill((255, 255, 255))
@@ -227,8 +229,10 @@ class CardedScreen(Screen):
         
         Text(self.root, es, (self.app.width // 2.25), (self.app.height // 3), str(self.msg), 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
 
-        Button(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), self.app.width // 10, self.app.height // 10, lambda: self.toScreen(IdleScreen), (180, 180, 180), Anchor.CENTER)
-        Text(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), "Назад", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
+        #Button(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), self.app.width // 10, self.app.height // 10, lambda: self.toScreen(IdleScreen), (180, 180, 180), Anchor.CENTER)
+        #Text(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), "Назад", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
+        Text(self.root, es, self.app.width // 10 * 9, self.app.height // 10, "Ekran zakroetsya avtomaticheski", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
+        if time.time() - self.t_start > 10: self.toScreen(IdleScreen)
 
 class App:
     def __init__(self):

@@ -28,7 +28,7 @@ class WsClient:
 
     async def wbs_runner(self):
         self.logger("trying to connect...")
-        async for ws in wbs.connect('ws://192.168.0.137:9090'):
+        async for ws in wbs.connect('ws://192.168.0.100:9090'):
             self.logger("connected to ws server")
             self.state = WsState.AUTHING
             msg = json.loads(await ws.recv())

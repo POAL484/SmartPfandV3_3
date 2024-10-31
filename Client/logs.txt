@@ -1,136 +1,503 @@
 
-13:54:06 config loaded, uid: 9bde968a-5800-457f-a7ef-ce853d522719
-13:54:07 RFID main thread started
-13:54:07 servo inited
-13:54:07 air inited
-13:54:07 App inited
-13:54:07 trying to connect...
-13:54:07 App runned
-13:54:07 connected to ws server
-13:54:07 auth success
-13:54:07 config updated
-13:54:08 started initing camera
-13:54:09 camera inited
-13:54:09 loading model
-13:54:09 model loaded
-13:54:09 neural inited
-13:54:24 App changed screen to IdleScreen
-13:54:39 neural check started
-13:54:39 cam read success
-13:54:39 predicts started
-13:54:43 sender sends... op: neural.prediction.v2.start
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 sender sends... op: neural.prediction.v2.pcg
-13:54:43 message recieved: {"op": "neural.prediction.v2.start", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 sender sends... op: neural.prediction.v2.pcg
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 sender sends... op: neural.prediction.v2.pcg
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 sender sends... op: neural.prediction.v2.pcg
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:43 sender sends... op: neural.prediction.v2.pcg
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:43 sender sends... op: neural.prediction.v2.pcg
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:43 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:44 sender sends... op: neural.prediction.v2.pcg
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 sender sends... op: neural.prediction.v2.pcg
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:44 sender sends... op: neural.prediction.v2.pcg
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 sender sends... op: neural.prediction.v2.pcg
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 sender sends... op: neural.prediction.v2.pcg
-13:54:44 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 sender sends... op: neural.prediction.v2.pcg
-13:54:44 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 sender sends... op: neural.prediction.v2.pcg
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:44 sender sends... op: neural.prediction.v2.pcg
-13:54:45 sender sends... op: neural.prediction.v2.pcg
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 sender sends... op: neural.prediction.v2.pcg
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 sender sends... op: neural.prediction.v2.pcg
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 sender sends... op: neural.prediction.v2.pcg
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 sender sends... op: neural.prediction.v2.pcg
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 sender sends... op: neural.prediction.v2.pcg
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 sender sends... op: neural.prediction.v2.pcg
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 sender sends... op: neural.prediction.v2.pcg
-13:54:45 sender sends... op: neural.prediction.v2.finish
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:45 sender sends... op: ping
-13:54:45 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
-13:54:46 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:46 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:46 message recieved: {"op": "neural.prediction.v2.finish", "status": "ok", "data": 0}
-13:54:46 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:47 message recieved: {"status": "err", "code": 904}
-13:54:47 neural success with result: CARD
-13:54:48 App changed screen to CardScreen
-13:54:58 new card presented: [89, 115, 132, 121, 215]
-13:54:58 Air started
-13:54:58 sender sends... op: machine.user.get
-13:54:58 App changed screen to CardedScreen
-13:54:58 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:59 message recieved: {"op": "machine.user.get", "status": "err", "data": "gAAAAABnI2IDZSLICGLHu5-CrH0vw1qzF0jonchm-D0adUU3cA9kEwEyTdGgamhVXw7XtxmIGE9WbXqh9G6KQhENmA6WgLeWKw=="}
-13:54:59 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:59 sender sends... op: machine.user.set
-13:54:59 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:54:59 message recieved: {"op": "machine.user.set", "status": "ok", "data": "ok"}
-13:54:59 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
-13:55:01 Air closed
-13:55:08 App changed screen to IdleScreen
-13:57:06 neural check started
-13:57:06 cam read success
-13:57:06 predicts started
+15:00:42 config loaded, uid: 9bde968a-5800-457f-a7ef-ce853d522719
+15:00:43 RFID main thread started
+15:00:43 servo inited
+15:00:43 air inited
+15:00:43 trying to connect...
+15:00:43 App inited
+15:00:43 App runned
+15:00:44 connected to ws server
+15:00:44 auth success
+15:00:44 config updated
+15:00:45 started initing camera
+15:00:45 camera inited
+15:00:46 loading model
+15:00:46 model loaded
+15:00:46 neural inited
+15:01:00 App changed screen to IdleScreen
+15:01:08 neural check started
+15:01:08 cam read success
+15:01:08 predicts started
+15:01:11 sender sends... op: neural.prediction.v2.start
+15:01:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:11 message recieved: {"op": "neural.prediction.v2.start", "status": "ok", "data": "ok"}
+15:01:11 sender sends... op: neural.prediction.v2.pcg
+15:01:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:11 sender sends... op: neural.prediction.v2.pcg
+15:01:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:11 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:11 sender sends... op: neural.prediction.v2.pcg
+15:01:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 sender sends... op: neural.prediction.v2.pcg
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 sender sends... op: neural.prediction.v2.pcg
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 sender sends... op: neural.prediction.v2.pcg
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:12 sender sends... op: neural.prediction.v2.pcg
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 sender sends... op: neural.prediction.v2.pcg
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 sender sends... op: neural.prediction.v2.pcg
+15:01:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:13 sender sends... op: neural.prediction.v2.pcg
+15:01:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 sender sends... op: neural.prediction.v2.pcg
+15:01:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:14 sender sends... op: neural.prediction.v2.pcg
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 sender sends... op: neural.prediction.v2.pcg
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 sender sends... op: neural.prediction.v2.pcg
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 sender sends... op: neural.prediction.v2.finish
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:14 sender sends... op: ping
+15:01:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:15 message recieved: {"op": "neural.prediction.v2.finish", "status": "ok", "data": 0}
+15:01:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:16 message recieved: {"status": "err", "code": 904}
+15:01:29 neural check started
+15:01:29 cam read success
+15:01:29 predicts started
+15:01:29 neural success with result: CARD
+15:01:30 sender sends... op: neural.prediction.v2.start
+15:01:30 sender sends... op: neural.prediction.v2.pcg
+15:01:30 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:30 sender sends... op: neural.prediction.v2.pcg
+15:01:30 message recieved: {"op": "neural.prediction.v2.start", "status": "ok", "data": "ok"}
+15:01:30 sender sends... op: neural.prediction.v2.pcg
+15:01:30 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:30 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 App changed screen to CardScreen
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 sender sends... op: neural.prediction.v2.pcg
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.pcg
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.pcg
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.pcg
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.pcg
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.pcg
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.pcg
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.pcg
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.pcg
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: neural.prediction.v2.finish
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 sender sends... op: ping
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:01:32 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:33 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:33 message recieved: {"op": "neural.prediction.v2.finish", "status": "ok", "data": 0}
+15:01:33 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:33 message recieved: {"status": "err", "code": 904}
+15:01:40 new card presented: [84, 25, 129, 47, 227]
+15:01:40 Air started
+15:01:40 sender sends... op: machine.user.get
+15:01:40 App changed screen to CardedScreen
+15:01:40 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:40 message recieved: {"op": "machine.user.get", "status": "ok", "data": "gAAAAABnI3GlsZJPWnNFK0gEfufvF40LUnbhE0LKaCRGFbUj6fmtTInUbFeHUIZqN_3VxqzuKH4m_VGcp6UTBqDLrAikbdO3d2BL4WB7veHZYorfMkuXus420zHHFv_itLQL0vaw3xqW"}
+15:01:41 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:41 sender sends... op: machine.user.set
+15:01:41 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:41 message recieved: {"op": "machine.user.set", "status": "ok", "data": "ok"}
+15:01:41 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:01:43 Air closed
+15:01:50 App changed screen to IdleScreen
+15:03:33 neural check started
+15:03:33 cam read success
+15:03:33 predicts started
+15:03:33 neural success with result: CARD
+15:03:35 App changed screen to CardScreen
+15:03:46 new card presented: [84, 25, 129, 47, 227]
+15:03:47 Air started
+15:03:47 App changed screen to CardedScreen
+15:03:47 sender sends... op: machine.user.get
+15:03:47 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:03:47 message recieved: {"op": "machine.user.get", "status": "ok", "data": "gAAAAABnI3Ik0beuRQO1vjL0MEl7n2wfiXtEWPBmVcdu50NY0hU17_AyzgkGyI7OYkYpRzglCs1Et-KLHmksK8N7ESUyY09N-cmugx7KAMiAtxRG9PCYoLD0DT9XxNtKw8Soc6AOKKs2"}
+15:03:47 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:03:47 sender sends... op: machine.user.set
+15:03:47 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:03:47 message recieved: {"op": "machine.user.set", "status": "ok", "data": "ok"}
+15:03:47 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:03:50 Air closed
+15:03:57 App changed screen to IdleScreen
+15:04:09 neural check started
+15:04:09 cam read success
+15:04:09 predicts started
+15:04:10 sender sends... op: neural.prediction.v2.start
+15:04:11 sender sends... op: neural.prediction.v2.pcg
+15:04:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:11 message recieved: {"op": "neural.prediction.v2.start", "status": "ok", "data": "ok"}
+15:04:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:11 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:11 sender sends... op: neural.prediction.v2.pcg
+15:04:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:11 sender sends... op: neural.prediction.v2.pcg
+15:04:11 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 sender sends... op: neural.prediction.v2.pcg
+15:04:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 sender sends... op: neural.prediction.v2.pcg
+15:04:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 sender sends... op: neural.prediction.v2.pcg
+15:04:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 sender sends... op: neural.prediction.v2.pcg
+15:04:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:12 sender sends... op: neural.prediction.v2.pcg
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:12 sender sends... op: neural.prediction.v2.pcg
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:12 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:13 sender sends... op: neural.prediction.v2.pcg
+15:04:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:13 sender sends... op: neural.prediction.v2.pcg
+15:04:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:13 sender sends... op: neural.prediction.v2.pcg
+15:04:13 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:13 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:13 sender sends... op: neural.prediction.v2.pcg
+15:04:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:14 sender sends... op: neural.prediction.v2.pcg
+15:04:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:14 sender sends... op: neural.prediction.v2.pcg
+15:04:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:14 sender sends... op: neural.prediction.v2.pcg
+15:04:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:14 sender sends... op: neural.prediction.v2.pcg
+15:04:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:14 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:14 sender sends... op: neural.prediction.v2.pcg
+15:04:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:14 sender sends... op: neural.prediction.v2.pcg
+15:04:14 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 sender sends... op: neural.prediction.v2.pcg
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 sender sends... op: neural.prediction.v2.pcg
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 sender sends... op: neural.prediction.v2.pcg
+15:04:15 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:15 sender sends... op: neural.prediction.v2.finish
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 sender sends... op: ping
+15:04:15 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:15 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:15 sender sends... op: neural.prediction.v2.start
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 sender sends... op: neural.prediction.v2.pcg
+15:04:16 message recieved: {"op": "neural.prediction.v2.finish", "status": "ok", "data": 0}
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 sender sends... op: neural.prediction.v2.pcg
+15:04:16 message recieved: {"status": "err", "code": 904}
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "neural.prediction.v2.start", "status": "ok", "data": "ok"}
+15:04:16 sender sends... op: neural.prediction.v2.pcg
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 sender sends... op: neural.prediction.v2.pcg
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:16 sender sends... op: neural.prediction.v2.pcg
+15:04:16 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 neural success with result: CARD
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:17 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:17 sender sends... op: neural.prediction.v2.pcg
+15:04:17 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.pcg
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.pcg
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.pcg
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.pcg
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.pcg
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.pcg
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.pcg
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.pcg
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: neural.prediction.v2.finish
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 message recieved: {"op": "neural.prediction.v2.pcg", "status": "ok", "data": "ok"}
+15:04:18 sender sends... op: ping
+15:04:18 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:18 App changed screen to CardScreen
+15:04:19 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:19 message recieved: {"op": "neural.prediction.v2.finish", "status": "ok", "data": 0}
+15:04:19 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:19 message recieved: {"status": "err", "code": 904}
+15:04:30 new card presented: [84, 25, 129, 47, 227]
+15:04:31 Air started
+15:04:31 App changed screen to CardedScreen
+15:04:31 sender sends... op: machine.user.get
+15:04:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:31 message recieved: {"op": "machine.user.get", "status": "ok", "data": "gAAAAABnI3JPPit16kb4VV-jgYCXYvcxxMh1Ys1Gzt7J3pza2gB69J4kZzV-aLK3Ic8B4g15Zjc8ud0e5FSeTrtGk583v6R_Mgp7O1g5Tc7EPl3-RNi5yc4Fh_YWKqm7AiQgMv8BZRy-"}
+15:04:31 sender sends... op: machine.user.set
+15:04:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:31 message recieved: {"op": "machine.user.set", "status": "ok", "data": "ok"}
+15:04:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:04:34 Air closed
+15:04:41 App changed screen to IdleScreen
+15:05:25 neural check started
+15:05:25 cam read success
+15:05:25 predicts started
+15:05:25 neural success with result: CARD
+15:05:27 App changed screen to CardScreen
+15:05:34 new card presented: [84, 25, 129, 47, 227]
+15:05:34 Air started
+15:05:34 sender sends... op: machine.user.get
+15:05:34 App changed screen to CardedScreen
+15:05:34 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:05:34 message recieved: {"op": "machine.user.get", "status": "ok", "data": "gAAAAABnI3KPsP58QK6MX8fF6TQmtxUeNvPAC7A9ksL3lwVYWpg5o3PzgFldm2fli5Ts3E5XZh7Qw3ZE8FmC-ldzMxFJveF84jCa6ytvVvt6PhYrTEvKlp6AvrKnx5Zr-6rH3c72ug7P"}
+15:05:34 sender sends... op: machine.user.set
+15:05:34 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:05:34 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:05:34 message recieved: {"op": "machine.user.set", "status": "ok", "data": "ok"}
+15:05:34 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+15:05:37 Air closed
+15:05:44 App changed screen to IdleScreen
+15:07:05 ERROR --- in RFID main thread: 
+---------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/multiprocessing/managers.py", line 260, in serve_client
+    self.id_to_local_proxy_obj[ident]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: '7f7b517c00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/multiprocessing/managers.py", line 262, in serve_client
+    raise ke
+  File "/usr/lib/python3.11/multiprocessing/managers.py", line 256, in serve_client
+    obj, exposed, gettypeid = id_to_obj[ident]
+                              ~~~~~~~~~^^^^^^^
+KeyError: '7f7b517c00'
+---------------------------------------------------------------------------
+15:07:05 ERROR --- in RFID main thread: [Errno 32] Broken pipe

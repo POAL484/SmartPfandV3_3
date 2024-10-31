@@ -1,5 +1,6 @@
 from pirc522 import RFID as rfid
 import threading as thrd
+import multiprocessing as mp
 
 class RFID:
     def __init__(self, cfg: dict, logger):
@@ -10,10 +11,29 @@ class RFID:
         self.uuid = [False, ""]
         self._flagIsPresented = 0
 
+    def make_req(self, r_dict):
+        r_dict['val'] = self.device.request()
+
     def __call__(self):
-        try:
-            while 1:
-                (error, data) = self.device.request()
+        manager = mp.Manager()
+        while 1:
+            try:
+                #(error, data) = self.device.request()
+                #signal.signal(signal.SIGALRM, lambda _, __: print(end=''))
+                #signal.alarm(10)
+                #try:
+                #    (error, data) = self.make_req()
+                #except Exception:
+                #    signal.alarm(0)
+                #    continue
+                r_dict = manager.dict()
+                p = mp.Process(target=self.make_req, args=(r_dict, ))
+                p.start()
+                p.join(timeout=10)
+                if p.is_alive():
+                    p.terminate()
+                    continue
+                (error, data) = r_dict['val']
                 if not error:
                     if self._flagIsPresented: self._flagIsPresented = 5
                     (error, uuid) = self.device.anticoll()
@@ -23,8 +43,8 @@ class RFID:
                         self.logger(f"new card presented: {uuid}")
                 else:
                     if self._flagIsPresented: self._flagIsPresented -= 1
-        except Exception as e:
-            self.logger(f"ERROR --- in RFID main thread: {e}")
+            except Exception as e:
+                self.logger(f"ERROR --- in RFID main thread: {e}")
 
     def presentedCard(self):
         val = self.uuid.copy()

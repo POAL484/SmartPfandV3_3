@@ -1,0 +1,8 @@
+
+14:09:25 RFID main thread started
+14:09:30 new card presented: [89, 115, 132, 121, 215]
+14:09:35 new card presented: [89, 115, 132, 121, 215]
+14:09:40 new card presented: [237, 129, 96, 93, 81]
+14:09:46 new card presented: [136, 5, 140, 94, 95]
+14:09:50 new card presented: [136, 5, 140, 94, 95]
+14:10:01 new card presented: [136, 5, 140, 94, 95]

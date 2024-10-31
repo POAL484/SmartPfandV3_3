@@ -65,6 +65,8 @@ class Neural:
                 preds = self.ws_send_recv
                 self.ws_send_recv = None
             else:
+                self.ws_send_send = None
+                self.ws_send_recv = None
                 self.logger("iterupted")
                 return
             #predIndex = np.argmax(preds)

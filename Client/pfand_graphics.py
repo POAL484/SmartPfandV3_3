@@ -263,6 +263,7 @@ class App:
         self.screen()
         self.neural()
         self.servo()
+        #self.rfid()
         pg.display.flip()
 
     def run_app(self):

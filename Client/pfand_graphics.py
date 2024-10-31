@@ -9,7 +9,7 @@ from pfand_ws import WsClient, WsState
 from pfand_neural import *
 
 import pfand_devices as dvs
-dvs.import_as(emulator=False)
+dvs.import_as(emulator=True)
 
 pg.init()
 

@@ -131,3 +131,6 @@
 13:54:59 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
 13:55:01 Air closed
 13:55:08 App changed screen to IdleScreen
+13:57:06 neural check started
+13:57:06 cam read success
+13:57:06 predicts started

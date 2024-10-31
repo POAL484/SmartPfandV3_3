@@ -27,7 +27,12 @@ class Neural:
         frame.remove(frame[-1])
         frame = (np.asarray(frame).astype('float32')/127.5)-1
         frameArray = np.asarray([frame.tolist()])
-        preds = round(np.argmax(self.model.predict(np.asarray(frameArray))))
+        #preds = round(np.argmax(self.model.predict(np.asarray(frameArray))))
+        m = self.model.predict(np.asarray(frameArray))
+        print(m)
+        print(np.argmax(m))
+        print(round(np.argmax(m)))
+        preds = round(np.argmax(m))
         print(preds)
         print(len(str(preds)))
         return preds

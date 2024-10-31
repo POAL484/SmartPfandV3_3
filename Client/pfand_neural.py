@@ -69,7 +69,7 @@ class Neural:
                 return
             #predIndex = np.argmax(preds)
             predIndex = preds
-            predIndex = 0
+            #predIndex = 0
             if self.app.bankWorkState == BankWorkState.NEURAL_CHECK:
                 match predIndex:
                     case 0:

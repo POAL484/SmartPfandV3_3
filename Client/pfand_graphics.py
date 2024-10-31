@@ -66,7 +66,7 @@ class InitScreen(Screen):
                 case WsState.FAILED_AUTHDATA:
                     self.app.storageMode = StorageMode.OFFLINE
         if self.app.neural.state == NeuralState.NOT_INITED or self.app.neural.state == NeuralState.FAILED: thrd.Thread(target=self.app.neural.init).start()
-        if time.time() - app.delta_time > 3: self.toScreen(IdleScreen)
+        if time.time() - app.delta_time > 15: self.toScreen(IdleScreen)
 
 class IdleScreen(Screen):
     def __call__(self):

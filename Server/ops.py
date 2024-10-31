@@ -6,6 +6,7 @@ import json
 async def machine_user_get(machine_id, data, users, tokens, info, server):
     if users.find_one(data['filter']):
         return "ok", encrypt(machine_id, tokens, json.dumps(no_object_id(users.find_one(data['filter'])))).decode("utf-8")
+    return "err", {}
     
 async def machine_user_set(machine_id, data, users, tokens, info, server):
     print(decrypt(machine_id, tokens, bytes(data['new_data'], 'utf-8')))

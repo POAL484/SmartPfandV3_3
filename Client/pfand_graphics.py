@@ -34,6 +34,11 @@ class Screen:
             self.app.wsclient.find("ping")
             if not pred is None:
                 self.app.neural.ws_send_recv = pred['data']
+        else:
+            self.app.wsclient.find("neural.prediction.v2.finish")
+            self.app.wsclient.find("neural.prediction.v2.pcg") 
+            self.app.wsclient.find("neural.prediction.v2.start")
+            self.app.wsclient.find("ping")
 
 class InitScreen(Screen):   
     def __call__(self):
@@ -126,7 +131,8 @@ class IdleScreen(Screen):
         if self.app.bankWorkState == BankWorkState.CARD: self.toScreen(CardScreen)
         if self.app.bankWorkState == BankWorkState.NEURAL_FAIL:
             Text(self.root, es, self.app.width//2, self.app.height//2+100, "ИИ не определил банку", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
-        if weight < self.app.config['min_bank_weight'] or weight > self.app.config['max_bank_weight']: self.app.bankWorkState = BankWorkState.NOTHING
+        if weight < self.app.config['min_bank_weight'] or weight > self.app.config['max_bank_weight']:
+            self.app.bankWorkState = BankWorkState.NOTHING
 
 class CloseIdleAnimationScreen(Screen):
     def __init__(self, app):
@@ -150,7 +156,7 @@ class CloseIdleAnimationScreen(Screen):
 
         Text(self.root, es, self.app.width//2, 125 - ((time.time() - self.animDelt)/self.animDuration)*225, "Помести банку в банкоприемник", 64, (35, 35, 35), 'Arial', Anchor.CENTER, True)
         
-        Text(self.root, es, self.app.width//2, self.app.height//2-100 - ((time.time() - self.animDelt)/self.animDuration)*(self.app.height//2), "Банка ура оооооо да банка ахереть это че банка", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
+        #Text(self.root, es, self.app.width//2, self.app.height//2-100 - ((time.time() - self.animDelt)/self.animDuration)*(self.app.height//2), "Банка ура оооооо да банка ахереть это че банка", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
 
         if (time.time() - self.animDelt) >= self.animDuration: self.toScreen(OpenCardAnimationScreen)
         
@@ -176,7 +182,7 @@ class OpenCardAnimationScreen(Screen):
 
         Text(self.root, es, self.app.width//2, 125 - ((time.time() - self.animDelt)/self.animDuration)*225, "Помести банку в банкоприемник", 64, (35, 35, 35), 'Arial', Anchor.CENTER, True)
         
-        Text(self.root, es, self.app.width//2, self.app.height//2-100 - ((time.time() - self.animDelt)/self.animDuration)*(self.app.height//2), "Банка ура оооооо да банка ахереть это че банка", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
+        #Text(self.root, es, self.app.width//2, self.app.height//2-100 - ((time.time() - self.animDelt)/self.animDuration)*(self.app.height//2), "Банка ура оооооо да банка ахереть это че банка", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
 
         if (time.time() - self.animDelt) >= self.animDuration: self.toScreen(CardScreen)
 

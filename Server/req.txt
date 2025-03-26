@@ -5,5 +5,5 @@ pymongo
 cryptography
 websockets
 asyncio
-tensorflow==2.12
+#tensorflow==2.12
 numpy

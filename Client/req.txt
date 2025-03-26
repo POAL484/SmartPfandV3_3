@@ -8,3 +8,4 @@ RPi.GPIO
 flask
 opencv-python
 pi-rc522
+ultralytics

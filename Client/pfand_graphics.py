@@ -126,11 +126,11 @@ class IdleScreen(Screen):
         weight = self.app.hx711.getWeight()
         self.app.bankAnimation(weight, self.root, es)
         if weight > self.app.config['min_bank_weight'] and weight < self.app.config['max_bank_weight']:
-            Text(self.root, es, self.app.width//2, self.app.height//2-100, "Сейчас ИИ определит твою банку...", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
+            Text(self.root, es, self.app.width//2, self.app.height//2-100, "Сейчас ИИ определит твою тару...", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
             if self.app.bankWorkState == BankWorkState.NOTHING: self.app.bankWorkState = BankWorkState.NEED_START_NEURAL
-        if self.app.bankWorkState == BankWorkState.CARD: self.toScreen(CardScreen)
+        if self.app.bankWorkState == BankWorkState.CARD_BANK or self.app.bankWorkState == BankWorkState.CARD_BOTTLE: self.toScreen(CardScreen)
         if self.app.bankWorkState == BankWorkState.NEURAL_FAIL:
-            Text(self.root, es, self.app.width//2, self.app.height//2+100, "ИИ не определил банку", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
+            Text(self.root, es, self.app.width//2, self.app.height//2+100, "ИИ не определил тару", 44, (0, 0, 0), 'Arial', Anchor.CENTER)
         if weight < self.app.config['min_bank_weight'] or weight > self.app.config['max_bank_weight']:
             self.app.bankWorkState = BankWorkState.NOTHING
 
@@ -189,9 +189,10 @@ class OpenCardAnimationScreen(Screen):
 class CardScreen(Screen):
     def __init__(self, *args):
         super().__init__(*args)
-        self.app.servo.open()
+        if self.app.bankWorkState == BankWorkState.CARD_BANK: self.app.servo.open_bank()
+        else: self.app.servo.open_bottle()
         self.app.neural.ws_send_recv = None
-        self.app.bankWorkState = BankWorkState.CARD
+        #self.app.bankWorkState = BankWorkState.CARD
 
     def __call__(self):
         self.root.fill((255, 255, 255))
@@ -207,13 +208,14 @@ class CardScreen(Screen):
 
         Text(self.root, es, (self.app.width // 2.25), (self.app.height//3), "Приложи любую электронную", 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
         Text(self.root, es, (self.app.width // 2.25), (self.app.height//3) + 100, "карту к считывателю", 48, (0, 0, 0), 'Arial', Anchor.LEFT, True)
+        Text(self.root, es, self.app.width - 50, 50, f"Найдена {'банка' if self.app.bankWorkState == BankWorkState.CARD_BANK else 'бутылка'}", 30, (0, 0, 0), 'Arial', Anchor.RIGHT)
 
         if self.app.rfid.presentedCard()[0]: self.toScreen(CardedScreen)
 
 class CardedScreen(Screen):
     def __init__(self, *args):
         super().__init__(*args)
-        self.app.air()
+        if self.app.bankWorkState == BankWorkState.CARD_BANK: self.app.air()
         thrd.Thread(target=self.app.wsclient.get_set_user, args=(self.app.rfid.presentedCard()[1], self)).start()
         self.msg = "Получение информации..."
         self.t_start = time.time()
@@ -240,7 +242,7 @@ class CardedScreen(Screen):
         #Button(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), self.app.width // 10, self.app.height // 10, lambda: self.toScreen(IdleScreen), (180, 180, 180), Anchor.CENTER)
         #Text(self.root, es, (self.app.width // 10), (self.app.height // 10 * 7), "Назад", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
         Text(self.root, es, self.app.width // 10, self.app.height // 10 * 9, "Экран закроется автоматически...", 32, (0, 0, 0), 'Arial', Anchor.LEFT)
-        if time.time() - self.t_start > 10:
+        if time.time() - self.t_start > 7:
             self.app.bankWorkState = BankWorkState.NOTHING
             self.toScreen(IdleScreen)
 

@@ -35,8 +35,9 @@ class AIR:
 class Servo:
     def __init__(self, cfg: dict, logger): pass
     def __call__(self): pass
-    def open(self): pass
+    def open_bank(self): pass
     def close(self): pass
+    def open_bottle(self): pass
 
 def createEmulator():
     app = Flask(__name__)

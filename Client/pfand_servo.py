@@ -46,9 +46,15 @@ class Servo:
     #    self.enabled = True
     #    self.logger("servo is opening now")
 
-    def open(self):
+    def open_bank(self):
         GPIO.output(self.pin, 1)
-        self.PWM.ChangeDutyCycle(self.max_degree / 18 + 2)
+        self.PWM.ChangeDutyCycle(180 / 18 + 2)
+        thrd.Thread(target=self.promisePowerOff).start()
+        thrd.Thread(target=self.promiseClose).start()
+
+    def open_bottle(self):
+        GPIO.output(self.pin, 1)
+        self.PWM.ChangeDutyCycle(0)
         thrd.Thread(target=self.promisePowerOff).start()
         thrd.Thread(target=self.promiseClose).start()
 
@@ -64,7 +70,7 @@ class Servo:
 
     def close(self):
         GPIO.output(self.pin, 1)
-        self.PWM.ChangeDutyCycle(self.min_degree / 18 + 2)
+        self.PWM.ChangeDutyCycle(90 / 18 + 2)
         thrd.Thread(target=self.promisePowerOff).start()
 
     def powerOff(self):

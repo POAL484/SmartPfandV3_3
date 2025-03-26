@@ -194,7 +194,8 @@ class BankWorkState(Enum):
     NEED_START_NEURAL = 52
     NEURAL_CHECK = 53
     NEURAL_FAIL = 54
-    CARD = 55
+    CARD_BANK = 55
+    CARD_BOTTLE = 56
 
 class Logger:
     def __init__(self):

@@ -1,12 +1,12 @@
-from keras.models import load_model
-import numpy as np
+#from keras.models import load_model
+#import numpy as np
 
 class Neural:
     def __init__(self):
-        self.model = load_model("model.h5", compile=False)
+        self.model = ''#load_model("model.h5", compile=False)
         
     def predict(self, frameBytesHexString):
-        frame = [[['']]]
+        '''frame = [[['']]]
         frameBytesHex = []
         for i in range(0, len(frameBytesHexString), 2):
             frameBytesHex.append(frameBytesHexString[i:i+2])
@@ -35,4 +35,5 @@ class Neural:
         preds = round(np.argmax(m))
         print(preds)
         print(len(str(preds)))
-        return preds
+        return preds'''
+        return 0

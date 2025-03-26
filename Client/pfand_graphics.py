@@ -9,7 +9,7 @@ from pfand_ws import WsClient, WsState
 from pfand_neural import *
 
 import pfand_devices as dvs
-dvs.import_as(emulator=True)
+dvs.import_as(emulator=False)
 
 pg.init()
 
@@ -189,7 +189,7 @@ class OpenCardAnimationScreen(Screen):
 class CardScreen(Screen):
     def __init__(self, *args):
         super().__init__(*args)
-        if self.app.bankWorkState == BankWorkState.CARD_BANK: self.app.servo.open_bank()
+        if self.app.bankWorkState == BankWorkState.CARD_BANK: self.app.servo.open_bottle()
         else: self.app.servo.open_bottle()
         self.app.neural.ws_send_recv = None
         #self.app.bankWorkState = BankWorkState.CARD

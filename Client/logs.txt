@@ -1,26 +1,26 @@
 
-14:04:23 config loaded, uid: 9bde968a-5800-457f-a7ef-ce853d522719
-14:04:23 App inited
-14:04:23 App runned
-14:04:23 trying to connect...
-14:04:23 started initing camera
-14:04:23 connected to ws server
-14:04:23 auth success
-14:04:23 config updated
-14:05:10 camera inited
-14:05:10 loading model
-14:05:21 model loaded
-14:05:21 neural inited
-14:05:36 App changed screen to IdleScreen
-14:06:27 cam read success
-14:06:27 neural check started
-14:06:27 predicts started
-14:06:27 neural success with result: NEURAL_FAIL
-14:06:51 cam read successrted
-14:06:51 predicts started
-14:06:51 neural success with result: NEURAL_FAIL
-14:07:36 neural check started
-14:07:36 cam read success
-14:07:36 predicts started
-14:07:36 neural success with result: CARD_BANK
-14:07:36 App changed screen to CardScreen
+16:50:14 config loaded, uid: 9bde968a-5800-457f-a7ef-ce853d522719
+16:50:15 RFID main thread started
+16:50:15 servo inited
+16:50:15 air inited
+16:50:15 App inited
+16:50:15 trying to connect...
+16:50:15 App runned
+16:50:16 connected to ws server
+16:50:16 auth success
+16:50:16 config updated
+16:50:17 started initing camera
+16:50:17 camera inited
+16:50:17 loading model
+16:50:41 model loaded
+16:50:41 neural inited
+16:50:56 App changed screen to IdleScreen
+16:50:58 neural check started
+16:50:58 cam read success
+16:50:58 predicts started
+16:51:03 neural success with result: NEURAL_FAIL
+16:54:24 cam read success
+16:54:24 neural check started
+16:54:24 predicts started
+16:54:28 neural success with result: NEURAL_FAIL
+16:55:07 ERROR --- in RFID main thread: 'val'

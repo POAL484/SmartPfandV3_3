@@ -14,7 +14,7 @@ def neuralCheck(self):
     if isSuccess:   
         self.logger("cam read success")
         #frame = cv.resize(frame, (96, 128))
-        cv.imwrite("lastNeuralFrame.png", frame)
+        cv.imwrite("sharedFrame.png", frame)
         #frame = (frame.astype('float32')/127.5)-1
         #frameArray = np.asarray([frame.tolist()])
         if self.app.bankWorkState == BankWorkState.NEURAL_CHECK:

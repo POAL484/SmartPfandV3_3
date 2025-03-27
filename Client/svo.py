@@ -6,7 +6,7 @@ import json
 model = YOLO("best.pt")
 
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(1)
 
 i = 0
 

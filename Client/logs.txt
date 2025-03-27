@@ -1,44 +1,90 @@
 
-16:26:12 config loaded, uid: 9bde968a-5800-457f-a7ef-ce853d522719
-16:26:13 RFID main thread started
-16:26:13 servo inited
-16:26:13 air inited
-16:26:13 App inited
-16:26:13 App runned
-16:26:13 trying to connect...
-16:26:14 connected to ws server
-16:26:14 auth success
-16:26:14 config updated
-16:26:15 started initing camera
-16:26:15 camera inited
-16:26:15 loading model
-16:26:45 model loaded
-16:26:45 neural inited
-16:27:00 App changed screen to IdleScreen
-16:27:07 cam read success
-16:27:07 neural check started
-16:27:07 predicts started
-16:27:12 neural success with result: NEURAL_FAIL
-16:27:57 neural check started
-16:27:57 cam read success
-16:27:57 predicts started
-16:27:57 neural success with result: NEURAL_FAIL
-16:28:30 cam read success
-16:28:30 neural check started
-16:28:30 predicts started
-16:28:30 neural success with result: NEURAL_FAIL
-16:29:26 cam read success
-16:29:26 neural check started
-16:29:26 predicts started
-16:29:30 neural check started
-16:29:30 cam read success
-16:29:30 predicts started
-16:29:31 neural success with result: NEURAL_FAIL
-16:33:58 neural check started
-16:33:58 cam read success
-16:33:58 predicts started
-16:33:58 neural success with result: NEURAL_FAIL
-16:34:53 cam read success
-16:34:53 neural check started
-16:34:53 predicts started
-16:34:54 neural success with result: NEURAL_FAIL
+18:23:31 config loaded, uid: 9bde968a-5800-457f-a7ef-ce853d522719
+18:23:32 RFID main thread started
+18:23:32 servo inited
+18:23:32 air inited
+18:23:32 App inited
+18:23:32 App runned
+18:23:32 trying to connect...
+18:23:32 connected to ws server
+18:23:32 auth success
+18:23:32 config updated
+18:23:33 started initing camera
+18:23:33 camera inited
+18:23:33 loading model
+18:23:57 model loaded
+18:23:57 neural inited
+18:24:12 App changed screen to IdleScreen
+18:24:21 neural check started
+18:24:21 cam read success
+18:24:21 predicts started
+18:24:22 neural success with result: CARD_BANK
+18:24:22 App changed screen to CardScreen
+18:24:44 new card presented: [136, 5, 140, 94, 95]
+18:24:44 Air started
+18:24:44 App changed screen to CardedScreen
+18:24:44 sender sends... op: machine.user.get
+18:24:44 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:24:45 message recieved: {"op": "machine.user.get", "status": "ok", "data": "gAAAAABn5W29j3epWdP5JDgEW1dXeXy5vxw3b0pkIxRlgDMRDd676Syf1TgSL19RqKO-RpHPqsQdsASGtKx7R2vRLZBtWnFIdaav7VaPam0zD3yCr0B85rpk7UagEcMfSlnKQF-Av7Xl"}
+18:24:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:24:45 sender sends... op: machine.user.set
+18:24:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:24:45 message recieved: {"op": "machine.user.set", "status": "ok", "data": "ok"}
+18:24:45 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:24:47 Air closed
+18:24:51 App changed screen to IdleScreen
+18:24:54 neural check started
+18:24:54 cam read success
+18:24:54 predicts started
+18:24:55 neural success with result: NEURAL_FAIL
+18:24:57 cam read success
+18:24:57 neural check started
+18:24:57 predicts started
+18:24:58 neural success with result: CARD_BANK
+18:24:58 App changed screen to CardScreen
+18:25:30 new card presented: [136, 5, 140, 94, 95]
+18:25:30 Air started
+18:25:30 App changed screen to CardedScreen
+18:25:30 sender sends... op: machine.user.get
+18:25:30 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:25:30 message recieved: {"op": "machine.user.get", "status": "ok", "data": "gAAAAABn5W3riw6QWZ6p8SQ7o_hG9j35BZ5vMCQtyZt-bfOuQhOwmCAN8Uy2aMpSLZMkeRz0cffF9D51oXgb0mcJwCFV-ePhYF7KvUYk2I5OZtV9l280kPTq0ARTgiRG9Ewkoc4zL29c"}
+18:25:30 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:25:31 sender sends... op: machine.user.set
+18:25:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:25:31 message recieved: {"op": "machine.user.set", "status": "ok", "data": "ok"}
+18:25:31 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:25:33 Air closed
+18:25:37 App changed screen to IdleScreen
+18:28:37 cam read success
+18:28:37 predicts started
+18:28:37 neural check started
+18:28:38 neural success with result: CARD_BOTTLE
+18:28:39 App changed screen to CardScreen
+18:28:57 new card presented: [136, 5, 140, 94, 95]
+18:28:57 sender sends... op: machine.user.get
+18:28:57 App changed screen to CardedScreen
+18:28:57 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:28:57 message recieved: {"op": "machine.user.get", "status": "ok", "data": "gAAAAABn5W657uRBR4-dmZZEb9QF4AX2f9wrL1d2ub0kQAteBEUxPbZGZljVArQXB5uJkq-C-B2uIaGqHGmp5ngLLz2q89ILdPWk6v47cqivXsMEcVm3gZ0zRfd8Tt8hJacmLVgBuDjj"}
+18:28:57 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:28:57 sender sends... op: machine.user.set
+18:28:57 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:28:57 message recieved: {"op": "machine.user.set", "status": "ok", "data": "ok"}
+18:28:57 message recieved: {"op": "ping", "status": "ok", "data": "ok"}
+18:29:04 App changed screen to IdleScreen
+18:29:11 cam read success
+18:29:11 neural check started
+18:29:11 predicts started
+18:29:12 neural success with result: NEURAL_FAIL
+18:29:18 cam read success
+18:29:18 neural check started
+18:29:18 iterrupted
+18:29:33 cam read success
+18:29:33 predicts started
+18:29:33 neural check started
+18:29:34 neural success with result: NEURAL_FAIL
+18:29:44 cam read success
+18:29:44 neural check started
+18:29:44 predicts started
+18:29:45 neural success with result: CARD_BOTTLE
+18:29:46 App changed screen to CardScreen
+18:32:31 ERROR --- in RFID main thread: 'val'

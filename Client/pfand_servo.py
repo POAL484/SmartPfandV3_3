@@ -10,6 +10,10 @@ class Servo:
         self.min_degree = cfg['servo']['min_degree']
         self.max_degree = cfg['servo']['max_degree']
 
+        self.bank_degree = cfg['servo']['bank_degree']
+        self.bottle_degree = cfg['servo']['bottle_degree']
+        self.middle_degree = cfg['servo']['middle_degree']
+
         self.enabled = False
         self.isOn = False
         self.startDelta = time.time()
@@ -48,13 +52,13 @@ class Servo:
 
     def open_bank(self):
         GPIO.output(self.pin, 1)
-        self.PWM.ChangeDutyCycle(180 / 18 + 2)
+        self.PWM.ChangeDutyCycle(self.bank_degree / 18 + 2)
         thrd.Thread(target=self.promisePowerOff).start()
         thrd.Thread(target=self.promiseClose).start()
 
     def open_bottle(self):
         GPIO.output(self.pin, 1)
-        self.PWM.ChangeDutyCycle(2)
+        self.PWM.ChangeDutyCycle(self.bottle_degree / 18 + 2)
         thrd.Thread(target=self.promisePowerOff).start()
         thrd.Thread(target=self.promiseClose).start()
 
@@ -70,7 +74,7 @@ class Servo:
 
     def close(self):
         GPIO.output(self.pin, 1)
-        self.PWM.ChangeDutyCycle(90 / 18 + 2)
+        self.PWM.ChangeDutyCycle(self.middle_degree / 18 + 2)
         thrd.Thread(target=self.promisePowerOff).start()
 
     def powerOff(self):

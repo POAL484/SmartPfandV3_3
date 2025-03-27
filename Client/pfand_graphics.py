@@ -94,7 +94,7 @@ class IdleScreen(Screen):
         pg.draw.rect(self.root, (60, 60, 60), pg.Rect(self.app.width-125-7.5, 125-10, 15, 55))
         pg.draw.rect(self.root, (60, 60, 60), pg.Rect(self.app.width-125-7.5, 125-45, 15, 15))
 
-        Text(self.root, es, self.app.width//2, 125, "Помести банку в банкоприемник", 64, (35, 35, 35), 'Arial', Anchor.CENTER, True)
+        Text(self.root, es, self.app.width//2, 125, "Помести taru в ustroystvo", 64, (35, 35, 35), 'Arial', Anchor.CENTER, True)
 
         #Bank(self.root, es, self.app.width//2, self.app.height//2, 0.6, 0, 0)
 
@@ -189,7 +189,7 @@ class OpenCardAnimationScreen(Screen):
 class CardScreen(Screen):
     def __init__(self, *args):
         super().__init__(*args)
-        if self.app.bankWorkState == BankWorkState.CARD_BANK: self.app.servo.open_bottle()
+        if self.app.bankWorkState == BankWorkState.CARD_BANK: self.app.servo.open_bank()
         else: self.app.servo.open_bottle()
         self.app.neural.ws_send_recv = None
         #self.app.bankWorkState = BankWorkState.CARD

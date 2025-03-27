@@ -5,6 +5,7 @@ from enum import Enum
 from pfand_types import BankWorkState
 import threading as thrd
 import requests as req
+import time
 
 from ultralytics import YOLO
 import json
@@ -25,7 +26,7 @@ def neuralCheck(self):
             #jpreds = json.loads(self.model(frame)[0].to_json())
             #if jpreds: preds = jpreds[0]['class']
             #else: preds = -1
-            preds = int(req.get("http://127.0.0.1:24680").text)
+            preds = int(req.get(f"http://127.0.0.1:24680/{time.time()}").text)
             #self.ws_send_send = frame
             #while self.ws_send_recv is None: pass
             print(f"get result {self.ws_send_recv}")
@@ -75,8 +76,8 @@ class Neural:
         try:
             self.state = NeuralState.INITING
             self.logger("started initing camera")
-            self.cvCam = cv.VideoCapture(self.camId)
-            self.cvCam.read()
+            #self.cvCam = cv.VideoCapture(self.camId)
+            #self.cvCam.read()
             self.logger("camera inited")
             self.logger("loading model")
             #self.model = load_model("model.h5", compile=False)

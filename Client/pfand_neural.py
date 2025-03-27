@@ -10,17 +10,18 @@ from ultralytics import YOLO
 import json
 
 def neuralCheck(self):
-    isSuccess, frame = self.cvCam.read()
+    #isSuccess, frame = self.cvCam.read()
+    isSuccess, frame = True, [[[0, 0, 0]]]
     if isSuccess:   
         self.logger("cam read success")
         #frame = cv.resize(frame, (96, 128))
-        cv.imwrite("sharedFrame.png", frame)
+        #cv.imwrite("sharedFrame.png", frame)
         #frame = (frame.astype('float32')/127.5)-1
         #frameArray = np.asarray([frame.tolist()])
         if self.app.bankWorkState == BankWorkState.NEURAL_CHECK:
             self.logger("predicts started")
             print(frame)
-            print(frame.shape)
+            #print(frame.shape)
             #jpreds = json.loads(self.model(frame)[0].to_json())
             #if jpreds: preds = jpreds[0]['class']
             #else: preds = -1

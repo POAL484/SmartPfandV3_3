@@ -54,7 +54,7 @@ class Servo:
 
     def open_bottle(self):
         GPIO.output(self.pin, 1)
-        self.PWM.ChangeDutyCycle(0)
+        self.PWM.ChangeDutyCycle(2)
         thrd.Thread(target=self.promisePowerOff).start()
         thrd.Thread(target=self.promiseClose).start()
 

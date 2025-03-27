@@ -10,8 +10,7 @@ app = Flask(__name__)
 
 cam = cv.VideoCapture(0)
 
-@app.route("/")
-def ind():
+def getRes():
     _, frame = cam.read()
     cv.imwrite("savedFrame.png", frame)
     res = model(frame)[0]
@@ -20,5 +19,9 @@ def ind():
     if not j: return '-1'
     if j[0]['confidence'] < .8 and j[0]['class'] == 0: return '-1'
     return str(j[0]['class'])
+
+@app.route("/")
+def ind():
+    return getRes()
 
 app.run("0.0.0.0", 24680)

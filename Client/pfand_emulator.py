@@ -16,6 +16,8 @@ class HX711:
     def getWeight(self):
         try: return float(self.weight.weight)
         except ValueError: return 0
+
+    def tare(self): pass
     
 class RFID:
     def __init__(self, cfg: dict, logger):

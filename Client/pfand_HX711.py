@@ -43,6 +43,10 @@ class HX711:
 
         return valSigned
     
+    def tare(self):
+        val = self.readRawValue()
+        self.offset = -val
+    
     def readInGramms(self):
         val = self.readRawValue()
         val += self.offset

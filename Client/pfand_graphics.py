@@ -263,6 +263,7 @@ class App:
         self.servo = dvs.Servo(self.config, self.logger)
         self.air = dvs.AIR(self.config, self.logger)
         if dvs.is_emulator: dvs.createEmulator()
+        self.hx711.tare()
         self.wsclient = WsClient(self.config, self.logger)
         self.screen = InitScreen(self)
         self.logger("App inited")

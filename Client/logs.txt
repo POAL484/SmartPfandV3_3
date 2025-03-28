@@ -1,17 +1,28 @@
 
-19:40:47 config loaded, uid: 9bde968a-5800-457f-a7ef-ce853d522719
-19:40:48 RFID main thread started
-19:40:48 servo inited
-19:40:48 air inited
-19:40:48 App inited
-19:40:48 App runned
-19:40:48 trying to connect...
-19:40:48 connected to ws server
-19:40:49 auth success
-19:40:49 config updated
-19:40:50 started initing camera
-19:40:50 camera inited
-19:40:50 loading model
-19:41:19 model loaded
-19:41:19 neural inited
-19:41:33 App changed screen to IdleScreen
+09:49:06 config loaded, uid: 9bde968a-5800-457f-a7ef-ce853d522719
+09:49:07 RFID main thread started
+09:49:07 servo inited
+09:49:07 air inited
+09:49:07 App inited
+09:49:07 App runned
+09:49:07 trying to connect...
+09:49:09 started initing camera
+09:49:09 camera inited
+09:49:09 loading model
+09:49:12 connected to ws server
+09:49:14 auth success
+09:49:14 config updated
+09:49:28 model loaded
+09:49:28 neural inited
+09:49:43 App changed screen to IdleScreen
+09:50:42 neural check started
+09:50:42 cam read success
+09:50:42 predicts started
+09:50:49 neural success with result: NEURAL_FAIL
+09:52:43 ERROR --- in RFID main thread: 'val'
+09:52:44 ERROR --- in RFID main thread: 'val'
+09:52:44 ERROR --- in RFID main thread: [Errno 32] Broken pipe
+09:52:44 ERROR --- in RFID main thread: [Errno 2] No such file or directory
+09:52:44 ERROR --- in RFID main thread: [Errno 2] No such file or directory
+09:52:44 ERROR --- in RFID main thread: [Errno 2] No such file or directory
+09:52:44 ERROR --- in RFID main thread: [Errno 2] No such file or directory

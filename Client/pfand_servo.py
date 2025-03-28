@@ -20,6 +20,8 @@ class Servo:
 
         self.openingTime = 2.5
 
+        self.safetyFIRST = False
+
         self.last_com_time = time.time()
 
         GPIO.setmode(GPIO.BOARD)
@@ -51,6 +53,7 @@ class Servo:
     #    self.logger("servo is opening now")
 
     def open_bank(self):
+        safetyFIRST = True
         GPIO.output(self.pin, 1)
         self.PWM.ChangeDutyCycle(self.bank_degree / 18 + 2)
         thrd.Thread(target=self.promisePowerOff).start()
@@ -75,12 +78,13 @@ class Servo:
     def close(self):
         GPIO.output(self.pin, 1)
         self.PWM.ChangeDutyCycle(self.middle_degree / 18 + 2)
-        thrd.Thread(target=self.promisePowerOff).start()
+        thrd.Thread(target=self.promisePowerOff, args=(1.5, False)).start()
 
     def powerOff(self):
         self.PWM.ChangeDutyCycle(0)
 
-    def promisePowerOff(self, time_to_sleep: float = 3.5):
+    def promisePowerOff(self, time_to_sleep: float = 1.5, sf = True):
+        self.safetyFIRST = sf
         time.sleep(time_to_sleep)
         self.powerOff()
 

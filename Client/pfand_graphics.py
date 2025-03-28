@@ -215,15 +215,19 @@ class CardScreen(Screen):
 class CardedScreen(Screen):
     def __init__(self, *args):
         super().__init__(*args)
-        if self.app.bankWorkState == BankWorkState.CARD_BANK: self.app.air()
         thrd.Thread(target=self.app.wsclient.get_set_user, args=(self.app.rfid.presentedCard()[1], self)).start()
         self.msg = "Получение информации..."
         self.t_start = time.time()
+        self.compressed = False
 
     def __call__(self):
         self.root.fill((255, 255, 255))
         es = EventState()
         self.call()
+
+        if self.app.bankWorkState == BankWorkState.CARD_BANK and not self.app.servo.safetyFIRST and not self.compressed:
+            self.app.air()
+            self.compressed = True
 
         stDrawPointX = (self.app.width // 6)
         stDrawPointY = (self.app.height // 3) * 2

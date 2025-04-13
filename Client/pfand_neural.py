@@ -81,7 +81,8 @@ class Neural:
             self.logger("camera inited")
             self.logger("loading model")
             #self.model = load_model("model.h5", compile=False)
-            self.model = YOLO("best.pt")
+            #self.model = YOLO("best.pt")
+            self.model = None
             self.logger("model loaded")
             self.logger("neural inited")
             self.state = NeuralState.INITED

@@ -13,7 +13,7 @@ import ops
 from neural import *
 
 class Server:
-    def __init__(self, port: int = 9090):
+    def __init__(self, port: int = 9080):
         self.port = port
 
         self.db_client = mongodb.MongoClient("mongodb://localhost:27017")
